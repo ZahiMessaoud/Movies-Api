@@ -1,5 +1,4 @@
 const Movie = require('../models/Movie')
-const jwtHelpers = require("../utils/jwtHelpers")
 
 exports.create = async (req, res) => {
     const {name, category, description} = req.body

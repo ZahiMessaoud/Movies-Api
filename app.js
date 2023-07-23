@@ -7,6 +7,7 @@ var mongoose = require('mongoose')
 var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
 var moviesRouter = require('./routes/movies');
+var watchListRouter = require('./routes/watchList');
 
 var app = express();
 
@@ -19,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/movies', moviesRouter);
+app.use('/api/watchList', watchListRouter);
 
 
 mongoose.connect(process.env.DB_URL)
